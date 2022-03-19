@@ -36,5 +36,15 @@ namespace LinkedListTests
             //Assert
             Assert.Equal(value, _list.Head.Value);
         }
+
+        [Fact]
+        public void GetEnumerator_Test()
+        {
+            //Assert 
+            Assert.Collection(_list,
+                item => Assert.Equal(item, 8),
+                item => Assert.Equal(item, 6)
+                );
+        }
     }
 }
