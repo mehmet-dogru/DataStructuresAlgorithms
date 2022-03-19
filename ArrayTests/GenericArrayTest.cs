@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Xunit;
 
-namespace ArrayTests
+namespace DataStructuresTests.ArrayTests
 {
     public class GenericArrayTest
     {

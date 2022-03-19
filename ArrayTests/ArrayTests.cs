@@ -1,7 +1,7 @@
 using DataStructures.Array;
 using Xunit;
 
-namespace ArrayTests
+namespace DataStructuresTests.ArrayTests
 {
     public class ArrayTests
     {

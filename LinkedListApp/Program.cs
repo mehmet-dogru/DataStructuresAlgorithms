@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructures.LinkedList.SinglyLinkedList;
+using System;
 
 namespace LinkedListApp
 {
@@ -56,17 +57,5 @@ namespace LinkedListApp
         }
     }
 
-    public class SinglyLinkedListNode<T>
-    {
-        public T Value { get; set; }
-        public SinglyLinkedListNode<T> Next { get; set; }
-
-        public SinglyLinkedListNode(T value)
-        {
-            Value = value;
-        }
-
-        public override string ToString() => $"{Value}";
-
-    }
+    
 }
