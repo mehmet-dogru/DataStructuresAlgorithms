@@ -37,6 +37,91 @@ namespace LinkedListTests
             Assert.Equal(value, _list.Head.Value);
         }
 
+        [Theory]
+        [InlineData(2)]
+        public void AddLast_Test(int value)
+        {
+            //Act
+            _list.AddLast(value);
+
+            //Assert
+            Assert.Collection(_list, 
+                item => Assert.Equal(8,item),
+                item => Assert.Equal(6,item),
+                item => Assert.Equal(value,item)
+                );
+        }
+
+        [Theory]
+        [InlineData(2)]
+        [InlineData(4)]
+        [InlineData(5)]
+        [InlineData(7)]
+        [InlineData(12)]
+        [InlineData(42)]
+        public void AddBefore_Test(int value)
+        {
+            //Act
+            _list.AddBefore(_list.Head.Next, value);
+
+            //Assert
+            Assert.Collection(_list,
+                    item => Assert.Equal(8, item),
+                    item => Assert.Equal(value, item),
+                     item => Assert.Equal(6, item));
+        }
+
+        [Fact]
+        public void AddBefore_ArgumentException()
+        {
+            //Act
+            var node = new SinglyLinkedListNode<int>(55);
+
+            //Assert
+            Assert.Throws<ArgumentException>(() => _list.AddBefore(node, 45));
+        }
+
+        [Theory]
+        [InlineData(2)]
+        [InlineData(4)]
+        [InlineData(5)]
+        [InlineData(7)]
+        [InlineData(12)]
+        [InlineData(42)]
+        public void AddAfter_Test(int value)
+        {
+            //8 [value] 6 
+            //Act
+            _list.AddAfter(_list.Head, value);
+
+            //Assert
+            Assert.Collection(_list, 
+               item => Assert.Equal(8,item),
+               item => Assert.Equal(value,item),
+               item => Assert.Equal(6,item));
+        }
+
+        [Fact]
+        public void AddAfter_ArgumentException()
+        {
+            //Act
+            var node = new SinglyLinkedListNode<int>(55);
+
+            //Assert
+            Assert.Throws<ArgumentException>(() => _list.AddAfter(node, 45));
+        }
+
+        [Fact]
+        public void RemoveFirst_Test()
+        {
+            // 8 6
+            //Act
+            _list.RemoveFirst();
+
+            //Assert
+            Assert.Collection(_list, item => Assert.Equal(6, item));
+        }
+
         [Fact]
         public void GetEnumerator_Test()
         {
