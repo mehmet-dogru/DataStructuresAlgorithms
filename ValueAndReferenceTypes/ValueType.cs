@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ValueAndReferenceTypes
+﻿namespace ValueAndReferenceTypes
 {
     public struct ValueType
     {
@@ -9,10 +7,10 @@ namespace ValueAndReferenceTypes
 
         public void Swap(int x, int y)
         {
-            int temp = x;
+            var temp = x;
             x = y;
             y = temp;
         }
-
     }
+
 }

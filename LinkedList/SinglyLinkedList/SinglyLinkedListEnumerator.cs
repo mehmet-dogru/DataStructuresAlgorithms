@@ -1,12 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 
 namespace DataStructures.LinkedList.SinglyLinkedList
 {
     public class SinglyLinkedListEnumerator<T> : IEnumerator<T>
     {
-        private SinglyLinkedListNode<T> Head { get; set; }
+        private SinglyLinkedListNode<T> Head { get; set;}
         private SinglyLinkedListNode<T> Curr { get; set; }
+
         public SinglyLinkedListEnumerator(SinglyLinkedListNode<T> head)
         {
             Head = head;
@@ -26,13 +26,13 @@ namespace DataStructures.LinkedList.SinglyLinkedList
             if (Head is null)
                 return false;
 
-            if (Curr == null)
+            if (Curr==null)
             {
                 Curr = Head;
                 return true;
             }
 
-            if (Curr.Next !=null)
+            if (Curr.Next!=null)
             {
                 Curr = Curr.Next;
                 return true;

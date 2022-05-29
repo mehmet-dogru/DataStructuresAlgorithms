@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 
 namespace DataStructures.LinkedList.SinglyLinkedList
 {
@@ -20,7 +18,7 @@ namespace DataStructures.LinkedList.SinglyLinkedList
         {
             foreach (var item in collection)
             {
-                AddFirst(item); 
+                AddFirst(item);
             }
         }
 
@@ -61,11 +59,11 @@ namespace DataStructures.LinkedList.SinglyLinkedList
             return;
         }
 
-        public void AddBefore(SinglyLinkedListNode<T> node, T value) 
+        public void AddBefore(SinglyLinkedListNode<T> node, T value)
         {
             if (node == null)
                 throw new ArgumentNullException(nameof(node));
-            
+
             if (isHeadNull || node.Equals(Head))
             {
                 AddFirst(value);
@@ -74,9 +72,9 @@ namespace DataStructures.LinkedList.SinglyLinkedList
 
             var newNode = new SinglyLinkedListNode<T>(value);
             var current = Head;
-            var prev = current; 
+            var prev = current;
 
-            while (current!= null)
+            while (current!=null)
             {
                 if (current.Equals(node))
                 {
@@ -88,12 +86,12 @@ namespace DataStructures.LinkedList.SinglyLinkedList
                 prev = current;
                 current = current.Next;
             }
-            throw new ArgumentException("There is no such a node in the linked list");   
+            throw new ArgumentException("There is no such a node in the linked list.");
         }
 
         public void AddAfter(SinglyLinkedListNode<T> node, T value)
         {
-            if (node == null)
+            if (node==null)
                 throw new ArgumentNullException(nameof(node));
 
             if (isHeadNull)
@@ -104,8 +102,7 @@ namespace DataStructures.LinkedList.SinglyLinkedList
 
             var newNode = new SinglyLinkedListNode<T>(value);
             var current = Head;
-
-            while (current != null)
+            while (current!=null)
             {
                 if (current.Equals(node))
                 {
@@ -116,25 +113,26 @@ namespace DataStructures.LinkedList.SinglyLinkedList
                 }
                 current = current.Next;
             }
-            throw new ArgumentException("There is no such a node in the linked list");
+            throw new ArgumentException("There is no such a node in the linked list.");
         }
 
         public T RemoveFirst()
         {
             if (isHeadNull)
                 throw new Exception(nameof(Head));
-               
-
+            
             var temp = Head;
             Head = Head.Next;
             Count--;
             return temp.Value;
         }
+
         public T RemoveLast()
         {
             if (isHeadNull || Count == 0)
                 throw new Exception(nameof(Head));
 
+            // Head silinecek ise; 
             if (Count == 1)
             {
                 var temp = Head;
@@ -191,5 +189,7 @@ namespace DataStructures.LinkedList.SinglyLinkedList
         }
 
         public List<T> ToList() => new List<T>(this);
+
+
     }
 }

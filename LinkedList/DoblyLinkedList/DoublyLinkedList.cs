@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 
-namespace LinkedList.DoblyLinkedList
+namespace DataStructures.LinkedList.DoblyLinkedList
 {
     public class DoublyLinkedList<T> : IEnumerable<T>
     {
@@ -16,7 +14,7 @@ namespace LinkedList.DoblyLinkedList
             Tail = null;
             Count = 0;
         }
-        public DoublyLinkedList(IEnumerable<T> collection) : this()
+        public DoublyLinkedList(IEnumerable<T> collection) :this()
         {
             foreach (var item in collection)
             {
@@ -98,7 +96,7 @@ namespace LinkedList.DoblyLinkedList
             throw new ArgumentException("There is no such a node in the list.");
         }
 
-
+        
         public void AddAfter(DbNode<T> node, T value)
         {
             if (node == null)
@@ -232,7 +230,8 @@ namespace LinkedList.DoblyLinkedList
             return GetEnumerator();
         }
 
-        public List<T> ToList() =>
+        public List<T> ToList() => 
             new List<T>(this);
+
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedList.DoblyLinkedList
+namespace DataStructures.LinkedList.DoblyLinkedList
 {
     public class DbNode<T>
     {
@@ -14,11 +15,6 @@ namespace LinkedList.DoblyLinkedList
         {
             Value = item;
         }
-
-        public override string ToString()
-        {
-            return $"{Value}";
-        }
-
+        public override string ToString() => $"{Value}";
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ValueAndReferenceTypes
+﻿namespace ValueAndReferenceTypes
 {
     public class RefType
     {
@@ -9,7 +7,7 @@ namespace ValueAndReferenceTypes
 
         public void Swap(ref int x, ref int y)
         {
-            int temp = x;
+            var temp = x;
             x = y;
             y = temp;
         }
@@ -20,4 +18,5 @@ namespace ValueAndReferenceTypes
             return;
         }
     }
+
 }

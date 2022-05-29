@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using Xunit;
 
-namespace DataStructuresTests.ArrayTests
+namespace ArrayTests
 {
     public class GenericArrayTest
     {
         private Array<char> _array;
         public GenericArrayTest()
         {
-            //Arrange
+            // arrange
             _array = new Array<char>(new List<char> {'s','a','m','u'});
         }
 
@@ -21,42 +21,43 @@ namespace DataStructuresTests.ArrayTests
         [InlineData(256)]
         public void DefaultSize_Test(int defaultSize)
         {
-            //Act
-            var arr = new Array<char>(defaultSize);
+            // act
+            var arr  = new Array<char>(defaultSize);
 
-            //Assert
+            // Assert
             Assert.Equal(arr.Length, defaultSize);
         }
 
         [Fact]
         public void Params_Test()
         {
-            //Arrange - Act
+            // arrange - act
             var arr = new Array<int>(1, 2, 3, 4);
 
-            //Assert
-            Assert.Equal(4,arr.Length);
+            // assert
+            Assert.Equal(4, arr.Length);
         }
 
         [Fact]
         public void GetValue_Test()
         {
-            //Act
+            // act
             var c = _array.GetValue(0);
 
-            //Assert
+            // Assert
             Assert.Equal('s', c);
             Assert.IsType<char>(c);
             Assert.True(c is char);
+            Assert.IsType(typeof(char), c);
         }
 
         [Fact]
         public void SetValue_Test()
         {
-            //Act
+            // Act
             _array.SetValue('S', 0);
 
-            //Assert
+            // Assert
             Assert.Equal('S', _array.GetValue(0));
         }
     }
