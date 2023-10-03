@@ -1,66 +1,66 @@
-# MYAZ206 Veri Yapıları ve Algoritmalar Dersi
-Veri yapıları ve algoritmalar, bilgisayar bilimleri açısından temel teşkil eden önemli bir alan olarak görülmelidir. Veri yapıları ve algoritmalar, problemlere mantıksal çözümler geliştirmenin ve aynı zamanda görevleri en iyi şekilde yerine getiren verimli programlar oluşturmanın temel yapı taşlarını oluşturdukları için bilgisayar biliminin önemli yönlerini oluştururlar.
+# Data Structures and Algorithms
+Data structures and algorithms are recognized as a fundamental and essential field within computer science. Data structures and algorithms form the fundamental building blocks of computer science, as they constitute the vital aspects of developing logical solutions to problems and creating efficient programs that perform tasks optimally.
 
-# Veri Yapıları ve Algoritmalara Giriş
-- Veri Yapılarına Giriş
-- Veri Tipleri
-- Referans Tipler (class) ve Değer Tipler (struct)
-- ref, out, params ve in parametre düzenleyicileri 
+# Introduction to Data Structures and Algorithms
+- Introduction to Data Structures
+- Data Types
+- Reference Types (class) and Value Types (struct)
+- ref, out, params, and in parameter modifiers
 
-# Diziler
-- Diziler (Array)
-- Dizi Tasarımı ve Uygulamaları
-- Dinamik Diziler 
-- Generic Diziler
-- Test Çalışmaları
+# Arrays
+- Arrays (Array)
+- Array Design and Applications
+- Dynamic Arrays
+- Generic Arrays
+- Test Exercises
 
-# Koleksiyonlar
-- Generic Olmayan Koleksiyonlar
+# Collections
+-Non-Generic Collections
   - ArrayList
   - Hashtable
-- Generic Koleksiyonlar
+- Generic Collections
   - List<T>
   - Dictionary<TKey, TValue>
   - SortedList
   - HashSet
-- Test Çalışmaları
+- Test Exercises
 
-# Bağlı Liste (Linked List)
+# Linked List
 - SinglyLinkedList
 - DoublyLinkedList
 - CircularLinkedList
-- Test Çalışmaları
+- Test Exercises
 
-# Yığın (Stack)
+# Stack
 - ArrayStack
 - LinkedListStack
 - IStack
 - Stack
-- Test Çalışmaları
+- Test Exercises
   
-# Kuyruk (Queue)
+# Queue
 - ArrayQueue
 - LinkedListQueue
 - IQueue
-- Test Çalışmaları
+- Test Exercises
   
- # Asimptotik Notasyonlar (Asymptotic Notations)
+ # Asymptotic Notations
  - Big O
- - Rekürsif Fonksiyonlar (Recursion function)
-    - Faktöriyel Fonksiyonu (Factorial Function)
-    - İkili Arama (Binary Search)
-    - Yerine Koyma Yöntemi (Substitution method)
-    - İterasyon Yöntemi (Iteration method)
-    - Ana teorem (Master Theorem)
+ - Recursive Functions
+    - Factorial Function
+    - Binary Search
+    - Substitution Method
+    - Iteration Method
+    - Master Theorem
   
-# Sıralama Algoritmaları (Sorting Algorithms)
-  - Kabarcık Sıralama (Bubble Sort)
-  - Seçmeli Sıralama (Selection Sort)
-  - Araya Eklemeli Sıralama (Insertion Sort)
-  - Hızlı Sıralama (Quick Sort)
-  - Birleştirmeli Sıralama (Merge Sort)
+# Sorting Algorithms
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Quick Sort
+  - Merge Sort
 
-# Ağaçlar (Trees)
-  - Ağaçlar
-  - İkili Ağaçlar
-  - İkili Arama Ağaçları 
+# Trees
+  - Trees
+  - Binary Trees
+  - Binary Search Trees
