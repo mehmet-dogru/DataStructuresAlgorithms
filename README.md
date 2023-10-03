@@ -15,7 +15,7 @@ Data structures and algorithms are recognized as a fundamental and essential fie
 - Test Exercises
 
 # Collections
--Non-Generic Collections
+- Non-Generic Collections
   - ArrayList
   - Hashtable
 - Generic Collections
